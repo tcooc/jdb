@@ -9,14 +9,14 @@ var rename = Promise.promisify(fs.rename);
 
 /*
  * options:
- * file - file to use as database (default "./jdb.json")
+ * file - file to use as database (default "./.jdb.json")
  * tempfile - file to use for safe/atomic writing (default file + ".tmp")
  * watch - watch for file changes and reload the database if file was changed (default true)
  * logErrors - log errors to console (default true)
  */
 function Database(options) {
 	options = _.extend({
-		file: './jdb.json',
+		file: './.jdb.json',
 		tempfile: null,
 		watch: true,
 		logErrors: true
